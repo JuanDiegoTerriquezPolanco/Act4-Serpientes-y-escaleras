@@ -44,17 +44,17 @@ class Player{
 }
 let dice = new Dice();
 let p1 = new Player();
-let p2 = new Player(),r=0;
+let p2 = new Player(),r=1;
 
 while(p1.getPosition() < 100 && p2.getPosition() < 100){
-    console.log(`|==|Round: ${r++}|==|`);
+    console.log(`|=========|Round: ${r++}|=========|`);
     p1.step();
     console.log(`Player 1 got ${d}, now he's at ${p1.getPosition()}`);
     p2.step();
     console.log(`Player 2 got ${d}, now he's at ${p2.getPosition()}`);
 }
 
-console.log(`|==|FINAL|==|`);
+console.log(`|=========|FINAL|=========|`);
 if (p1.getPosition() >= 100) {
     console.log(`Player 1 was the winner with: ${p1.getPosition()}`);
 } else {
